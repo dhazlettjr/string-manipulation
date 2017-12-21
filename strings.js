@@ -4,18 +4,29 @@
 //implement the logic in the reversal function that reverses the order of the characters in the string, and outputs the result in the DOM, below the text input.
 
 let btn = document.getElementById("btn");
-let result = document.getElementById("result");
+let output = document.getElementById("output");
 let input = document.getElementById("input");
 
 
+
 document.getElementById("btn").addEventListener("click", function(){
-    document.getElementById("result").innerHTML = input.value;
+    reversal(input.value);
+   // document.getElementById("output").innerHTML = input.value;
 });
 
 
-function reversal(input) {
-    return input.split("").reverse().join("");
+function reversal(str) {
+
+let splitString = str.split("");
+let reverseArr = splitString.reverse();
+let joinArr = reverseArr.join("");
+    document.getElementById("output").innerHTML = str.split("").reverse().join("");
+    //return str.split("").reverse().join("");
+
 }
+
+
+
 
 
 
